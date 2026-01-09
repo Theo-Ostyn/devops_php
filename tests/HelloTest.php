@@ -9,5 +9,10 @@ class HelloTest extends TestCase{
         $hello = new Hello();
         $this->assertSame('Bonjour, BTS SIO SLAM !', $hello->sayHello('BTS SIO SLAM'));
     }
+
+    public function testReturnType(): void{
+        $hello = new Hello();
+        $this->assertIsString($hello->sayHello('Bob'));
+    }
 }
 
